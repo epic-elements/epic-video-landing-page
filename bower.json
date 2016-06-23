@@ -1,0 +1,20 @@
+{
+  "name": "zeal-optics-video-landing-page",
+  "description": "A landing page for video content",
+  "main": "index.html",
+  "authors": [
+    "Phil McKenzie",
+    "Alex Goodwin"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/epic-elements/epic-video-landing-page",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
