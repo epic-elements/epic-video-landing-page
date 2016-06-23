@@ -8,6 +8,7 @@
   },
   "author": "Alex Goodwin",
   "license": "ISC",
+  "repository": "https://github.com/epic-elements/epic-video-landing-page",
   "dependencies": {
     "gulp-autoprefixer": "^3.1.0",
     "gulp-minify": "0.0.11",
