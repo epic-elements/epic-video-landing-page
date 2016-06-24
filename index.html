@@ -4,118 +4,67 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>road to woodward</title>
+    <title>Video Landing Page</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <!-- webtype fonts -->
-    <!-- <link href="./css/f8780814-4f06-4cb3-a33a-a4037a65ed35.css" rel="stylesheet" type="text/css" /> -->
+    <link href="./css/f8780814-4f06-4cb3-a33a-a4037a65ed35.css" rel="stylesheet" type="text/css" />
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="bower_components/epic-contentful/epic-contentful.html" />
+    <link rel="import" href="bower_components/marked-element/marked-element.html" />
 
     <script src="./js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 
 <body>
     <!-- nav-bar goes here -->
+    <epic-contentful token="7293987ea91368b8cae485aeadc4037af8253ae4706e2fa0400f9a831aa93086" space="1kzutnf7jc3r" content-type="videoLandingPage">
+        <epic-contentful-filter property="fields.slug" value="events/the-road-to-woodward"></epic-contentful-filter>
+    </epic-contentful>
+
+
 
     <div id="pageContent" class="main">
         <div class="heroTop">
         </div>
 
-        <div class="overlay">
-            <h1>The Road To <span class="woodwardYellow">Woodward</span></h1>
-            <h2>Sun – Slush – Slash - Send</h2>
-        </div>
+        <marked-element class="overlay">
+        </marked-element>
 
-        <div class="copyText">
-            <p>
-                As most people’s minds and leisure pursuits turn to surf trips and getting beached, we’re dedicating the early months of summer to chasing water sports of the firmer variety and to proving that finding your playa is just a state of mind.
-            </p>
-            <p>
-                This June and July, we’re hitting the road in search of slush to slash and have partnered with Woodward Camps and a host of dedicated partners to chase winter in the search for the 365-day goggle tan.
-            </p>
-        </div>
+        <marked-element class="copyText">
+        </marked-element>
 
-        <h2>Our Partners</h2>
+        <h2 id="imageGalleryTitle"></h2>
 
         <div class="partnerDisplay">
-            <a target="_blank" href="http://www.arcteryx.com/Home.aspx?language=EN">
-                <img src="img/Arcteryx336.jpg" alt="Arcteryx Logo">
-            </a>
-            <a target="_blank" href="http://www.exped.com/usa/en">
-                <img src="img/exped336.jpg" alt="Exped Logo">
-            </a>
-            <a target="_blank" href="http://www.coppercolorado.com/">
-                <img src="img/Copper336.jpg" alt="Copper Mountain Logo">
-            </a>
-            <a target="_blank" href="http://www.rideboreal.com/winter/index.html">
-                <img src="img/boreal336.jpg" alt="Boreal Mountain Logo">
-            </a>
-            <a target="_blank" href="http://www.campwoodward.com/">
-                <img src="img/woodward336.jpg" alt="Woodward Logo">
-            </a>
         </div>
 
         <div class="mediaElement">
             <div class="youtube">
-              <div class="embed-container">
-                  <iframe src="https://www.youtube.com/embed/-Kt2JaYFpVQ" frameborder="0" allowfullscreen></iframe>
-              </div>
+                <div class="embed-container">
+                    <iframe frameborder="0" allowfullscreen id="featuredVideo"></iframe>
+                </div>
             </div>
 
             <div class="details">
-                <h3>
-                    Road To Woodward Episode 1 - Copper
-                </h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod sapien varius sodales pharetra. Vestibulum in nisi nulla. Quisque dignissim placerat risus, efficitur auctor ligula congue vel. Vestibulum elit turpis, ultrices vel mauris non, pretium ornare diam. Etiam dictum consectetur porta. Quisque feugiat sapien id ipsum imperdiet, ut aliquam erat laoreet. Quisque dapibus pulvinar cursus.
-                </p>
+                <h3 id="featuredVideoTitle"></h3>
+
+                <marked-element id="featuredVideoDescription"></marked-element>
             </div>
         </div>
 
         <div class="contentCardGallery">
-            <div class="card">
-                <div class="topHalf">
-                    <div class="embed-container">
-                      <iframe src="https://www.youtube.com/embed/-Kt2JaYFpVQ" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="bottomHalf">
-                    <div class="details">
-                        <h3>Road To Woodward Episode 1</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod sapien varius sodales pharetra. Vestibulum in nisi nulla.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="topHalf">
-                    <div class="embed-container">
-                      <iframe
-                       src="https://www.youtube.com/embed/-Kt2JaYFpVQ" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="bottomHalf">
-                    <div class="details">
-                        <h3>Road To Woodward Episode 2</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod sapien varius sodales pharetra. Vestibulum in nisi nulla.
-                        </p>
-                    </div>
-                </div>
-            </div>
         </div>
-
-        <footer>
-          <p>
-            Footer
-          </p>
-        </footer>
     </div>
-    <script src="./js/jquery-2.1.4.min.js"></script>
-    <script src="./js/zeal-nav-bar.min.js"></script>
+
+    <script src="./node_modules/markdown/lib/markdown.js"></script>
+    <script src="./js/contentful_pull.js"></script>
 </body>
 
 </html>

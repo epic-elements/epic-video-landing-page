@@ -2,12 +2,12 @@ $lightGrey: #ccc;
 $mediumGrey: #666;
 $darkGrey: #333;
 $navy: #036;
+$red: #c30;
 $white: #fff;
 $green: #366;
-$woodwardYellow: #fef22a;
 $overlayBackground: linear-gradient(to top, rgba(#111, 1) 0%, rgba(#111, .8) 55%, transparent 100%);
 $overlayBackground: #000;
-@import 'reset.css';
+
 body {
     padding: 0;
     margin: 0;
@@ -455,7 +455,7 @@ h2 {
     width: 100%;
     margin: 0 auto;
     .heroTop {
-        background: url('../img/rtwwHeader.jpg') center top no-repeat;
+        background: url('') center top no-repeat;
         background-size: contain;
         background-attachment: fixed;
         color: white;
@@ -479,6 +479,7 @@ h2 {
         color: white;
         position: relative;
         top: -7px;
+        display: block;
         h1 {
             font-size: 4em;
             margin: 0 auto;
@@ -490,10 +491,7 @@ h2 {
             margin: 0 auto;
             padding: 0;
         }
-        .woodwardYellow {
-            color: $woodwardYellow;
-            font-weight: 700;
-        }
+
     }
     .copyText {
         background-image: url("../img/nice_snow.png");
@@ -501,6 +499,7 @@ h2 {
         background-size: auto;
         padding: 2em;
         text-align: center;
+        display: block;
         p {
             display: inline-block;
             text-align: left;
@@ -625,7 +624,13 @@ h2 {
                         font-size: 1.5em;
                         padding-bottom: 0.5em;
                     }
-                    p {}
+                    a.button {
+                      color: white;
+                      background: $red;
+                      padding: 1em 2em;
+                      display: inline-block;
+                      margin: 1em auto;
+                    }
                 }
             }
         }
