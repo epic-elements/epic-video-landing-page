@@ -455,13 +455,20 @@ h2 {
     width: 100%;
     margin: 0 auto;
     .heroTop {
-        padding: 800px 0 0;
         background: url('../img/rtwwHeader.jpg') center top no-repeat;
         background-size: contain;
         background-attachment: fixed;
         color: white;
         width: 100%;
         margin: 0 auto;
+        position: relative;
+        display: inline-block;
+
+        &:after {
+          display: block;
+          content: '';
+          padding-top: 41.25%;
+        }
     }
     .overlay {
         padding: 2em 1em;
@@ -470,10 +477,13 @@ h2 {
         background: $overlayBackground;
         vertical-align: bottom;
         color: white;
+        position: relative;
+        top: -7px;
         h1 {
             font-size: 4em;
             margin: 0 auto;
             padding: 0;
+            line-height: 1.2;
         }
         h2 {
             font-size: 2em;
@@ -630,18 +640,35 @@ h2 {
     }
 }
 
+@media screen and (min-width: 1680px) {
+  .main {
+    .heroTop{
+      &:after {
+        padding-top: 700px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 991px){
+    h2 {
+      font-size: 2em;
+    }
     .main {
-        .heroTop {
-            padding: 500px 0 0;
-            h1 {
-                font-size: 2.5em;
-            }
+        .overlay {
+          h1 {
+              font-size: 2.5em;
+          }
+          h2 {
+              font-size: 1.5em;
+          }
         }
         .copyText {
             p{
                 max-width: none;
                 width: 100%;
+                box-sizing: border-box;
+                font-size: 1em;
             }
         }
         .partnerDisplay {
@@ -655,6 +682,14 @@ h2 {
             height: 0;
             padding-bottom: 56.25%;
           }
+          .details {
+            h3 {
+              font-size: 1.5em;
+            }
+            p {
+              font-size: 1em;
+            }
+          }
         }
         .contentCardGallery {
             .card {
@@ -666,6 +701,11 @@ h2 {
 }
 @media screen and(max-width: 599px) {
     .main {
+        .overlay {
+          h2 {
+            font-size: 1.2em;
+          }
+        }
         .contentCardGallery {
           justify-content: center;
           .card {
